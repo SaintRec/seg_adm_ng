@@ -1,0 +1,58 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Perfil de usuario </h4>
+            <p class="card-category"><b>Informacion de usuario</b> </p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="card-category">Nombres</label>
+                  <p class="card-category">{{user.nombres}}</p>
+                </div>
+                <div class="col-md-6">
+                  <label class="card-category">Apellidos</label>
+                  <p class="card-category">{{user.apellidos}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <label class="card-category">No. Cédula</label>
+                  <p class="card-category">{{user.cod_cc}}</p>
+                </div>
+                <div class="col-md-4">
+                  <label class="card-category">Codigo Pidm</label>
+                  <p class="card-category">{{user.cod_pidm}}</p>
+                </div>
+                <div class="col-md-4">
+                  <label class="card-category">Codigo Id</label>
+                  <p class="card-category">{{user.cod_id}}</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-avatar">
+            <a href="#pablo">
+              <img class="img" alt="Espe Logo" src="../../../assets/img/logoESPE.png" />
+            </a>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{user.nombres}} {{user.apellidos}}</h4>
+            <h6 class="card-category"><strong>Perfiles:</strong></h6>
+            <h6 class="card-category text-gray">
+              <li *ngFor="let p of  perfil"> {{p.perfil}}</li>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
