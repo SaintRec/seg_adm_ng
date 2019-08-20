@@ -1,7 +1,7 @@
 import { Component, Inject } from "@angular/core";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 import { RestService } from "app/service/rest.service";
-import { SistemasData } from "app/interfaces/app.interface";
+import { SistemasData1 } from "app/interfaces/sistema.interface";
 
 @Component({
   selector: "app-addsis",
@@ -9,7 +9,7 @@ import { SistemasData } from "app/interfaces/app.interface";
   styleUrls: ["./addsis.component.scss"]
 })
 export class AddsisComponent {
-  sistema: SistemasData = {
+  sistema: SistemasData1 = {
     sisId: 0,
     sisNombre: "",
     sisUrlSistema: "",

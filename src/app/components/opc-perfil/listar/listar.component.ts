@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 import { RestService } from "app/service/rest.service";
-import { OpcionData } from "app/interfaces/app.interface";
+import { OpcionData } from "app/interfaces/opcion.interface";
 @Component({
   selector: "app-listar",
   templateUrl: "./listar.component.html",

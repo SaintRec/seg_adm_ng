@@ -16,7 +16,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <mat-form-field>
-                      <mat-label>Seleccione Un Sistema</mat-label>
+                      <mat-label>Seleccione un Sistema</mat-label>
                       <mat-select [(ngModel)]="sistema1.sisId" name="sisop">
                         <mat-option *ngFor="let sistema of sistemas " value="{{sistema.sisId}}"
                           (click)=" listperfil(sistema.sisId)">
@@ -27,7 +27,7 @@
                   </div>
                   <div class="col-md-4">
                     <mat-form-field>
-                      <mat-label>Seleccione Un perfil</mat-label>
+                      <mat-label>Seleccione un perfil</mat-label>
                       <mat-select [(ngModel)]="perfil.perId" name="peropc">
                         <mat-option *ngFor="let perfil of profiles " value="{{perfil.perId}}" (click)=" usuarios()">
                           {{perfil.perNombre}}

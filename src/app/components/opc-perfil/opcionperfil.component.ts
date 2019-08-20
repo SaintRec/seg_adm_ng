@@ -14,14 +14,9 @@ import {
 import { RestService } from "../../service/rest.service";
 import { SelectionModel } from "@angular/cdk/collections";
 import { ToastsManager } from "ng6-toastr";
-import {
-  Opciones,
-  PerfilData2,
-  OpcionData
-} from "app/interfaces/app.interface";
-import { OpcionS } from "app/interfaces/opcion.interface";
+import { Opciones, OpcionData, OpcionS} from 'app/interfaces/opcion.interface';
+import { PerfilData2, PerfilS  } from 'app/interfaces/perfil.interface';
 import { SistemasData } from "app/interfaces/sistema.interface";
-import { PerfilS } from "app/interfaces/perfil.interface";
 import { AuthService } from "app/service/auth.service";
 import { Router } from "@angular/router";
 

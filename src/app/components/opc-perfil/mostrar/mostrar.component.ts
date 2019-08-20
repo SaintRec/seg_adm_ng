@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewContainerRef, ViewChild } from '@angular/core';
 import { RestService } from 'app/service/rest.service';
-import { SistemasData, PerfilData, PerfilData2, OpcionData } from 'app/interfaces/app.interface';
+import {  OpcionData } from 'app/interfaces/opcion.interface';
+import { PerfilData2, PerfilData} from 'app/interfaces/perfil.interface';
+import {SistemasData1} from 'app/interfaces/sistema.interface';
 import { MatPaginator, MatTableDataSource, MatSort, MatDialog, MatDialogRef } from '@angular/material';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ListarComponent } from 'app/components/opc-perfil/listar/listar.component';
@@ -24,7 +26,7 @@ export class MostrarComponent implements OnInit {
   sistemas: any = []
   profiles: any = []
   ejemplo1: any = []
-  sistema1: SistemasData = {
+  sistema1: SistemasData1 = {
     sisId: 0,
     sisNombre: "",
     sisUrlSistema: "",

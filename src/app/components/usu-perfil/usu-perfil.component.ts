@@ -18,13 +18,12 @@ import { SelectionModel } from "@angular/cdk/collections";
 import { ToastsManager } from "ng6-toastr";
 import {
   Usua,
-  PerfilData2,
-  SistemasData,
   UsuarioData
-} from "app/interfaces/app.interface";
+} from "app/interfaces/usuario.interface";
+import {   PerfilData2 } from 'app/interfaces/perfil.interface';
 import { Router } from "@angular/router";
 import { AuthService } from "app/service/auth.service";
-
+import { SistemasData1} from "app/interfaces/sistema.interface";
 @Component({
   selector: "app-usu-perfil",
   templateUrl: "./usu-perfil.component.html",
@@ -57,7 +56,7 @@ export class UsuPerfilComponent implements OnInit, AfterViewInit {
     sisId: 0
   };
 
-  sistema1: SistemasData = {
+  sistema1: SistemasData1 = {
     sisId: 0,
     sisNombre: "",
     sisUrlSistema: "",
