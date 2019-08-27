@@ -16,16 +16,68 @@
                         <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Buscar...">
                         <mat-card *ngIf="mostrarMensajeFiltro">No existen resultados</mat-card>
                     </mat-form-field>
-                    <div class="alert alert-warning" role="alert">
-                        <button mat-icon-button color="primary">
-                            <mat-icon aria-label="Edit">info</mat-icon>
-                            <strong>Si no visualizas un SISTEMA, </strong> ACTÍVALO en el módulo SISTEMAS
-                        </button>
+                    <div class="col-md-4">
+                        <a id="modal-77315" href="#modal-container-77315" role="button" class="btn" data-toggle="modal">
+                            <mat-icon aria-label="Edit">visibility</mat-icon>&nbsp; IMPORTANTE!!
+                        </a>
+
+                        <div class="modal fade" id="modal-container-77315" role="dialog" aria-labelledby="myModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center">
+                                        <strong>
+                                            RECUERDA, si no visualizas un SISTEMA, ACTÍVALO en el módulo SISTEMAS </strong>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" style="text-align: center"
+                                            data-dismiss="modal">
+                                            CERRAR
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-2">
                 </div>
             </div>
+        </div>
+        <div class="modal fade" id="modal-container-77315" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align: center">
+                        <strong>
+                            Recuerda, si creas un nuevo SISTEMA, no lo podrás ELIMINAR</strong>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" style="text-align: center" data-dismiss="modal">
+                            CERRAR
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         <div class="container-fluid">
             <div class="row">

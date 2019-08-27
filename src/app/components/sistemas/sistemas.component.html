@@ -15,19 +15,40 @@
                     <mat-form-field>
                         <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Buscar...">
                     </mat-form-field>
-                    <!-- <div class="alert alert-warning" role="alert">
-                        <button mat-icon-button color="primary">
-                            <mat-icon aria-label="Edit">info</mat-icon>
-                            <strong class="letra"> Recuerda!!</strong>Si creas un nuevo SISTEMA, NO LO PODRÁS ELIMINAR.
-                        </button>
-                    </div>
-                    <div class="alert" role="alert">
-                        <mat-icon aria-label="Edit">info</mat-icon>
+                    <div class="col-md-4">
+                        <a id="modal-77315" href="#modal-container-77315" role="button" class="btn" data-toggle="modal">
+                            <mat-icon aria-label="Edit">visibility</mat-icon>&nbsp; IMPORTANTE!!
+                        </a>
 
-                        <button class="btn btn-gris btn-round">
-                            <strong class="letra"> Recuerda!!</strong>Si creas un nuevo SISTEMA, NO LO PODRÁS ELIMINAR.
-                        </button>
-                    </div> -->
+                        <div class="modal fade" id="modal-container-77315" role="dialog" aria-labelledby="myModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center">
+                                        <strong>
+                                            Recuerda, si creas un nuevo SISTEMA, no lo podrás ELIMINAR</strong>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" style="text-align: center"
+                                            data-dismiss="modal">
+                                            CERRAR
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
                 <div class="col-md-2">
                 </div>
@@ -51,37 +72,37 @@
                                 class="example-button" mat-stroked-button color="primary">
                                 <mat-icon aria-label="Edit">info</mat-icon>
                             </button> -->
-                            <!-- <button mat-raised-button (click)="openDialog()">
+                        <!-- <button mat-raised-button (click)="openDialog()">
                                     <mat-icon aria-label="Edit">info
                                     </mat-icon>
                                     Pick one</button> -->
 
-                            <!-- <div class="alert alert-warning" role="alert">
+                        <!-- <div class="alert alert-warning" role="alert">
                             <button mat-icon-button color="primary">
                                 <mat-icon aria-label="Edit">info</mat-icon>
                                 <strong>VISUALIZAR SISTEMAS POR ESTADO </strong>
                             </button>
                         </div> -->
 
-                            <!-- <button mat-icon-button color="primary">
+                        <!-- <button mat-icon-button color="primary">
                                 <mat-icon aria-label="Edit">info</mat-icon>
                         </button> -->
-                            <!-- <button mat-icon-button color="primary">
+                        <!-- <button mat-icon-button color="primary">
                                 <mat-icon aria-label="Edit">visibility</mat-icon>
                             </button> -->
 
 
-                            <mat-form-field>
-                                <mat-label>SISTEMAS por ESTADO</mat-label>
-                                <mat-select>
-                                    <mat-option (click)=" cargarSistemas('segs')">
-                                        Activo
-                                    </mat-option>
-                                    <mat-option (click)=" cargarSistemas('segsi')">
-                                        Inactivo
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>SISTEMAS por ESTADO</mat-label>
+                            <mat-select>
+                                <mat-option (click)=" cargarSistemas('segs')">
+                                    Activo
+                                </mat-option>
+                                <mat-option (click)=" cargarSistemas('segsi')">
+                                    Inactivo
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                         <!-- </div> -->
                     </div>
                 </div>
