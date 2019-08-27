@@ -16,6 +16,12 @@
                         <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Buscar...">
                         <mat-card *ngIf="mostrarMensajeFiltro">No existen resultados</mat-card>
                     </mat-form-field>
+                    <div class="alert alert-warning" role="alert">
+                        <button mat-icon-button color="primary">
+                            <mat-icon aria-label="Edit">info</mat-icon>
+                            <strong>Si no visualizas un SISTEMA, </strong> ACTÍVALO en el módulo SISTEMAS
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-2">
                 </div>

@@ -23,5 +23,12 @@
 </mat-dialog-content>
 <mat-dialog-actions style="justify-content: center">
     <button class="btn-ng" mat-stroked-button color="warn" (click)="cerrarModal()">Cancelar</button>
-    <button mat-stroked-button color="primary" [disabled]="!forma.valid" (click)="addSistema()">Agregar</button>
+    <button 
+    mat-raised-button
+        matTooltip="SI AGREGAS UN SISTEMA, NO LO PODRÁS ELIMINAR"
+        matTooltipClass="example-tooltip-red"
+        aria-label="Button that shows a red tooltip"
+        class="example-button"
+        mat-stroked-button color="primary" [disabled]="!forma.valid" (click)="addSistema()">Agregar</button>
+        
 </mat-dialog-actions>

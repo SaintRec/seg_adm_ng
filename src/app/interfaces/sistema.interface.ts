@@ -8,8 +8,8 @@ export interface SistemasData {
 export interface SistemaListData {
   sisId: number | string;
   sisNombre: string;
-
 }
+
 export interface SistemasData1 {
   sisId: number;
   sisNombre: string;

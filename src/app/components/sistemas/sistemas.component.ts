@@ -1,16 +1,19 @@
 import {
   Component,
+  Inject,
   OnInit,
   ViewChild,
   ViewContainerRef,
-  AfterViewInit
+  AfterViewInit,
+  ViewEncapsulation
 } from "@angular/core";
 import {
   MatPaginator,
   MatTableDataSource,
   MatSort,
   MatDialog,
-  MatDialogRef
+  MatDialogRef,
+  MAT_DIALOG_DATA
 } from "@angular/material";
 
 import { AddsisComponent } from "../sistemas/addsis/addsis.component";
@@ -23,7 +26,8 @@ import { RestService } from "app/service/rest.service";
 @Component({
   selector: "app-sistemas",
   templateUrl: "./sistemas.component.html",
-  styleUrls: ["./sistemas.component.scss"]
+  styleUrls: ["./sistemas.component.scss"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SistemasComponent implements OnInit, AfterViewInit {
   // Seting Angular Material
@@ -200,4 +204,16 @@ export class SistemasComponent implements OnInit, AfterViewInit {
       }
     );
   }
-}
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(SistemasComponent, {
+  //     width: '250px',
+  //   });
+    
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
+    //openDialog(){
+    //  'mirar'
+    //}
+  }
+
