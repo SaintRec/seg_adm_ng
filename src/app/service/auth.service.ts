@@ -17,7 +17,7 @@ export class AuthService {
 
   login(credetianl) {
     let pass = JSON.stringify(credetianl);
-    return this.http.post("/adm/login", pass, http).pipe(
+    return this.http.post("/sdn/login", pass, http).pipe(
       map(
         (res: any) => {
           return res;

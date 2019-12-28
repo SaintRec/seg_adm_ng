@@ -14,7 +14,7 @@
                 <div class="col-md-4">
                   <mat-form-field>
                     <mat-label> <strong>Contraseña</strong></mat-label>
-                    <input matInput placeholder="Ingrese su contraseña" [(ngModel)]="passEdt.usuClave" name="actual"
+                    <input matInput placeholder="Ingrese su contraseña" [(ngModel)]="passEdt.clave" name="actual"
                       [type]="hide ? 'password' : 'text'" required #passOld="ngModel">
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     <mat-error *ngIf="passOld.hasError('required')">La contraseña actual es requerida</mat-error>
@@ -36,7 +36,7 @@
                 <div class="col-md-4">
                   <mat-form-field>
                     <mat-label> <strong>Contraseña</strong></mat-label>
-                    <input matInput placeholder="Ingrese su nueva contraseña" [(ngModel)]="passNw.usuClave"
+                    <input matInput placeholder="Ingrese su nueva contraseña" [(ngModel)]="passNw.clave"
                       name="antigua" [type]="hide ? 'password' : 'text'" minlength="6" #passNew="ngModel" required>
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     <mat-error *ngIf="passNew.hasError('required')">La nueva contraseña es requerida.</mat-error>
@@ -54,7 +54,7 @@
           </mat-step>
           <mat-step [stepControl]="checkpass">
             <form [formGroup]="checkpass">
-              <ng-template matStepLabel>Done</ng-template>
+              <ng-template matStepLabel>Confirmar</ng-template>
               <mat-checkbox formControlName="check"><strong> Esta seguro del cambio de clave de seguridad.</strong>
               </mat-checkbox>
               <div>

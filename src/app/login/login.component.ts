@@ -2,7 +2,7 @@ import { Component, ViewContainerRef, OnInit } from "@angular/core";
 import { AuthService } from "app/service/auth.service";
 import { Router } from "@angular/router";
 import { ToastsManager } from "ng6-toastr";
-import { credentials } from "app/interfaces/credencia.interface";
+import { credentials, credentials1 } from "app/interfaces/credencia.interface";
 
 @Component({
   selector: "app-login",
@@ -10,9 +10,9 @@ import { credentials } from "app/interfaces/credencia.interface";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  credential: credentials = {
-    usuClave: "",
-    spridenId: ""
+  credential: credentials1 = {
+    cedula: "",
+    clave: ""
   };
 
   options: any = {

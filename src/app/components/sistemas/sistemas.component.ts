@@ -67,7 +67,6 @@ export class SistemasComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.access();
   }
 
   setPaginator() {
@@ -184,26 +183,26 @@ export class SistemasComponent implements OnInit, AfterViewInit {
     });
   }
 
-  access() {
-    this.userPass = this.userToken.getUserToken();
-    this.rest.findDataUser(this.userPass.sub).subscribe(
-      data => {
-        this.opcion = data.opciones.filter(item => item.opcion == "SISTEMAS");
-        if (this.opcion.length == 0 || this.opcion == undefined) {
-          this.route.navigateByUrl("/dashboard");
-        } else {
-          this.cargarSistemas("segs");
-          this.crear = this.opcion.map(x => x.crear);
-          this.crear = this.crear.find(x => x == 1);
-          this.editar = this.opcion.map(x => x.modificar);
-          this.editar = this.editar.find(x => x == 1);
-        }
-      },
-      error => {
-        console.log(error);
-      }
-    );
-  }
+  // access() {
+  //   this.userPass = this.userToken.getUserToken();
+  //   this.rest.findDataUser(this.userPass.sub).subscribe(
+  //     data => {
+  //       this.opcion = data.opciones.filter(item => item.opcion == "SISTEMAS");
+  //       if (this.opcion.length == 0 || this.opcion == undefined) {
+  //         this.route.navigateByUrl("/dashboard");
+  //       } else {
+  //         this.cargarSistemas("segs");
+  //         this.crear = this.opcion.map(x => x.crear);
+  //         this.crear = this.crear.find(x => x == 1);
+  //         this.editar = this.opcion.map(x => x.modificar);
+  //         this.editar = this.editar.find(x => x == 1);
+  //       }
+  //     },
+  //     error => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(SistemasComponent, {
   //     width: '250px',

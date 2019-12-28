@@ -28,7 +28,7 @@ export class RestService {
   // Funcion unica para guargar---------------------------------------
   addData(sistema, add: String) {
     let sistemaAdd = JSON.stringify(sistema);
-    return this.http.post("/adm/" + add, sistemaAdd, http).pipe(
+    return this.http.post("/sdn/" + add, sistemaAdd, http).pipe(
       map(
         (res: any) => {
           return res;
@@ -42,7 +42,7 @@ export class RestService {
   // Funcion unica para actualizar-----------------------------------
   updateData(sistema, upd: String) {
     let sistemaUpdate = JSON.stringify(sistema);
-    return this.http.put("/adm/" + upd, sistemaUpdate, http).pipe(
+    return this.http.put("/sdn/" + upd, sistemaUpdate, http).pipe(
       map(
         (res: any) => {
           return res;
@@ -68,39 +68,52 @@ export class RestService {
   }
 
   findData(id: number, upd: String) {
-    return this.http.get("/adm/" + upd + "/" + id, http).pipe(
+    return this.http.get('/adm/' + upd + '/' + id, http).pipe(
       map(
         (res: any) => {
           return res;
         },
         error => {
-          console.log("Error: ", error);
+          console.log('Error: ', error);
         }
       )
     );
   }
 
   findDataUser(user: String) {
-    return this.http.get("/adm/id/" + user + "/1", http).pipe(
+    return this.http.get('/adm/id/' + user + '/1', http).pipe(
       map(
         (res: any) => {
           return res;
         },
         error => {
-          console.log("Error: ", error);
+          console.log('Error: ', error);
+        }
+      )
+    );
+  }
+
+  findRole(user: String) {
+    return this.http.get('/sdn/role/' + user , http).pipe(
+      map(
+        (res: any) => {
+          return res;
+        },
+        error => {
+          console.log('Error: ', error);
         }
       )
     );
   }
 
   findDataBanner(id: string) {
-    return this.http.get("/banner/" + id, http).pipe(
+    return this.http.get('/banner/' + id, http).pipe(
       map(
         (res: any) => {
           return res;
         },
         error => {
-          console.log("Error: ", error);
+          console.log('Error: ', error);
         }
       )
     );

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { credentials } from "app/interfaces/credencia.interface";
+import { credentials, credentials1 } from "app/interfaces/credencia.interface";
 import { MatStepper } from "@angular/material";
 import { RestService } from "app/service/rest.service";
 import { ToastsManager } from "ng6-toastr";
@@ -16,14 +16,25 @@ export class ConfiguracionesComponent implements OnInit {
   checkpass: FormGroup;
   hide = true;
   disabled = false;
+  // user = this.userToken.getUserToken();
+  // public passEdt: credentials = {
+  //   spridenId: this.user.sub,
+  //   usuClave: ""
+  // };
   user = this.userToken.getUserToken();
-  public passEdt: credentials = {
-    spridenId: this.user.sub,
-    usuClave: ""
+  public passEdt: credentials1 = {
+    cedula: this.user.sub,
+    clave : ""
   };
-  public passNw: credentials = {
-    usuClave: "",
-    spridenId: this.user.sub
+
+  // public passNw: credentials = {
+  //   usuClave: "",
+  //   spridenId: this.user.sub
+  // };
+
+  public passNw: credentials1 = {
+    clave: "",
+    cedula: this.user.sub
   };
 
   options: any = {
